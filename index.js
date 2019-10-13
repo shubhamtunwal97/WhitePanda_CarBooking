@@ -24,5 +24,9 @@ app.use('/car',car)
 app.use('/customer',customer)
 app.use('/booking',booking)
 
-var port =  process.env.PORT || 3000
+app.get("/",(req,res,next)=>{
+    res.send({status:"welcome"})
+})
+
+var port =  process.env.PORT || 80
 app.listen(port, () => console.log('Example app listening on port 3000!'))
