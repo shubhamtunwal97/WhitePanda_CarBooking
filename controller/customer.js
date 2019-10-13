@@ -31,15 +31,15 @@ app.post("/add_cust",(req,res,next)=>{
 })
 
 app.get("/get_all",(req,res,next)=>{
-  res.send({status:"get_all"})
-//     CustomerModel.find({}, 
-//         function(err, custs) {
-//           if (err){
-//             res.send(err)
-//           }
-//           res.send(custs)
-//         }
-//     );
+  //res.send({status:"get_all"})
+    CustomerModel.find({}, 
+        function(err, custs) {
+          if (err){
+            res.send(err)
+          }
+          res.send(custs)
+        }
+    );
   
   
 })
