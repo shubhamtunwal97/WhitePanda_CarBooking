@@ -35,7 +35,7 @@ app.get("/get_all",(req,res,next)=>{
     CustomerModel.find({}, 
         function(err, custs) {
           if (err){
-            console.log(err)
+            res.send(err)
           }
           res.send(custs)
         }
