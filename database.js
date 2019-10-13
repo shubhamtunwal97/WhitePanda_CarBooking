@@ -1,9 +1,7 @@
 let mongoose = require('mongoose');
-const database = 'user64';    
-//mongodb://pawan64:feelsgood64@ds263590.mlab.com:63590/user64
-const server = 'mongodb://pawan64:feelsgood64@ds263590.mlab.com:63590';
+const database = 'shubham';    
 //const server = 'mongodb+srv://admin:admin123@cluster0-dwjis.mongodb.net'; // REPLACE WITH YOUR DB SERVER
-
+const server  ='mongodb://shubham:shubham07@ds233268.mlab.com:33268'
 module.exports  = class Database {
   constructor() {
     this._connect()
