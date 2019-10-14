@@ -12,7 +12,19 @@ app.post("/add_car",(req,res,next)=>{
   addCar(req,res)
 })
 
+app.post("/delete",(req,res,next)=>{
+  console.log(req.body)
+  CarModel.remove({ vno: req.body.vno, booking_status: null }, function(err) {
+    if (err) {
+           console.log(err);
+           res.send(err)
+    }
+    else {
+            res.send({status:"deleted successfully"})
+    }
+});
 
+})
 // fliter according to rent, capacity, date and avaibility
 app.get("/filter",(req,res,next)=>{
 
